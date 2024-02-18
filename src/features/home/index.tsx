@@ -225,51 +225,6 @@ const ExperienceBlock = () => {
   )
 }
 
-const Tabs = () => {
-  const { inView } = useViewportStore()
-  const tabs = [
-    {
-      tab: 'About',
-      href: '#about',
-    },
-    {
-      tab: 'Experience',
-      href: '#experience',
-    },
-  ]
-
-  return (
-    <div className=" rounded-3xl  fixed inset-0  pointer-events-none items-end justify-center flex p-6">
-      <div className="p-2 rounded-2xl bg-stone-900 pointer-events-auto">
-        <ul className="flex gap-4">
-          {tabs.map(({ tab, href }) => (
-            <Link
-              key={tab}
-              href={href}
-              className={clsx(
-                'text-md font-medium transition relative px-3 py-1.5 ',
-                {
-                  'text-tertiary-1': inView === tab,
-                  'text-stone-50/50': inView !== tab,
-                }
-              )}
-            >
-              {tab}
-              {inView === tab && (
-                <motion.span
-                  layoutId="bubble"
-                  className="absolute inset-0 z-10 bg-tertiary-1/10 rounded-xl"
-                  transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                />
-              )}
-            </Link>
-          ))}
-        </ul>
-      </div>
-    </div>
-  )
-}
-
 const MainContent = () => {
   const content = [AboutContentBlock, ExperienceBlock]
   return (
@@ -288,7 +243,6 @@ export function HomePage() {
         <Sidebar />
         <MainContent />
       </div>
-      <Tabs />
     </div>
   )
 }
