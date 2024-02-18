@@ -2,8 +2,7 @@
 import Typography from '@/components/Typography'
 import { ArrowUpRight } from 'lucide-react'
 import Link from 'next/link'
-import React, { useEffect, useRef } from 'react'
-import handleViewport, { useInViewport } from 'react-in-viewport'
+import { useEffect, useRef } from 'react'
 import useViewportStore, { changeCurrentView } from './store/viewportStore'
 import useOnScreen from './utils/useOnScreen'
 import clsx from 'clsx'
@@ -272,12 +271,7 @@ const Tabs = () => {
 }
 
 const MainContent = () => {
-  const config = {
-    rootMargin: '-100px',
-  }
-  const Experience = handleViewport(ExperienceBlock, config)
-  const About = handleViewport(AboutContentBlock, config)
-  const content = [About, Experience]
+  const content = [AboutContentBlock, ExperienceBlock]
   return (
     <main className="pt-24 lg:w-1/2 lg:py-24 flex-col gap-24 flex">
       {content.map((Content, index) => (
