@@ -5,7 +5,7 @@ import React from 'react'
 export const typographyVariants = cva('text-xl', {
   variants: {
     variant: {
-      h1: 'scroll-m-20 text-4xl font-extrabold tracking-tighter lg: text-5xl text-primary-11',
+      h1: 'scroll-m-20 text-4xl font-bold tracking-tighter lg: text-5xl text-primary-11',
       h2: 'scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 text-primary-11',
       h3: 'scroll-m-20 text-2xl font-semibold tracking-tight text-primary-11',
       h4: 'scroll-m-20 text-xl font-semibold tracking-tight text-primary-11',

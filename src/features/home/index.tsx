@@ -1,17 +1,30 @@
 'use client'
 import Typography from '@/components/Typography'
-import { ArrowUpRight } from 'lucide-react'
+import { ArrowUpRight, Github, Instagram, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useRef } from 'react'
-import useViewportStore, { changeCurrentView } from './store/viewportStore'
+import { changeCurrentView } from './store/viewportStore'
 import useOnScreen from './utils/useOnScreen'
-import clsx from 'clsx'
-import { motion } from 'framer-motion'
+
+const socials = [
+  {
+    icon: Instagram,
+    href: 'https://www.instagram.com/trpfsu/',
+  },
+  {
+    icon: Linkedin,
+    href: 'https://www.linkedin.com/in/eduardo-sanchez-93a191227/',
+  },
+  {
+    icon: Github,
+    href: 'https://www.github.com/eds2002',
+  },
+]
 
 const Sidebar = () => {
   return (
-    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
-      <div className="gap-3 flex flex-col">
+    <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24  gap-4 flex flex-col">
+      <div className="gap-4 flex flex-col flex-start">
         <Typography variant="h1" className="font-bold">
           Eduardo Sanchez
         </Typography>
@@ -26,6 +39,20 @@ const Sidebar = () => {
           Developer based in New Jersey, spending my time building web apps that
           help people.
         </Typography>
+      </div>
+      <div className="flex flex-row gap-8 mt-4">
+        {socials.map((item) => {
+          const Icon = item.icon
+
+          return (
+            <Link href={item.href} key={item.href} target="_blank">
+              <Icon
+                size={24}
+                className="text-white opacity-75 hover:text-tertiary-1 transition-colors cursor-pointer"
+              />
+            </Link>
+          )
+        })}
       </div>
     </header>
   )
