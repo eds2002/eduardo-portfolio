@@ -171,14 +171,14 @@ const ExperienceBlock = () => {
               <Typography
                 variant="h3"
                 affects={'removePMargin'}
-                className="text-lg font-medium"
+                className="text-md font-medium"
               >
                 {item.role} • {item.name}
               </Typography>
               <Typography
                 variant="p"
                 affects={'removePMargin'}
-                className="text-md opacity-75"
+                className="text-xs opacity-75"
               >
                 {item.description}
               </Typography>
@@ -188,7 +188,7 @@ const ExperienceBlock = () => {
                     <Typography
                       variant="p"
                       affects={'removePMargin'}
-                      className="text-md opacity-75"
+                      className="text-xs opacity-75"
                     >
                       {responsibility}
                     </Typography>
@@ -199,7 +199,7 @@ const ExperienceBlock = () => {
                 {item.stack.map((tech) => (
                   <span
                     key={tech}
-                    className="text-sm text-tertiary-1 font-semibold px-4 py-1 bg-tertiary-1/25 rounded-full block"
+                    className="text-xs text-tertiary-1 font-semibold px-4 py-1 bg-tertiary-1/25 rounded-full block"
                   >
                     {tech}
                   </span>
