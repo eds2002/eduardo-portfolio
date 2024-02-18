@@ -151,7 +151,7 @@ const ExperienceBlock = () => {
             href={item.href}
             target="_blank"
             key={item.name}
-            className="hover:bg-tertiary-1/25 rounded-2xl p-3 transition-colors cursor-pointer"
+            className="hover:bg-tertiary-1/25 rounded-2xl p-3 transition-colors cursor-pointer "
           >
             <div className="flex items-center text-sm font-medium leading-6 text-tertiary-6">
               <svg
