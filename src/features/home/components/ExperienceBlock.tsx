@@ -105,7 +105,10 @@ export const ExperienceBlock = () => {
               </Typography>
               <ul className="px-4 flex flex-col gap-1">
                 {item.responsibility?.map((responsibility) => (
-                  <li className="list-disc text-tertiary-1">
+                  <li
+                    className="list-disc text-tertiary-1"
+                    key={responsibility}
+                  >
                     <Typography
                       variant="p"
                       affects={'removePMargin'}
