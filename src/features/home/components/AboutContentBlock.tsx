@@ -1,19 +1,9 @@
 'use client'
-import { useEffect, useRef } from 'react'
-import useOnScreen from '../utils/useOnScreen'
-import { changeCurrentView } from '../store/viewportStore'
 import Typography from '@/components/Typography'
 
 export const AboutContentBlock = () => {
-  const ref = useRef<HTMLDivElement>(null)
-  const isVisible = useOnScreen(ref)
-
-  useEffect(() => {
-    if (isVisible) changeCurrentView('About')
-    else changeCurrentView('Experience')
-  }, [isVisible])
   return (
-    <section ref={ref} id="about">
+    <section id="about">
       <Typography variant="h2" className="text-md  uppercase pb-4 lg:hidden ">
         About
       </Typography>
