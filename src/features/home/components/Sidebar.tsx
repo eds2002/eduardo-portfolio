@@ -1,5 +1,5 @@
 import Typography from '@/components/Typography'
-import { Github, Instagram, Linkedin } from 'lucide-react'
+import { Github, Instagram, Linkedin, Mail } from 'lucide-react'
 import Link from 'next/link'
 
 const socials = [
@@ -14,6 +14,11 @@ const socials = [
   {
     icon: Github,
     href: 'https://www.github.com/eds2002',
+  },
+
+  {
+    icon: Mail,
+    href: 'mailto:es23jr@gmail.com',
   },
 ]
 
