@@ -5,13 +5,13 @@ import React from 'react'
 export const typographyVariants = cva('text-xl', {
   variants: {
     variant: {
-      h1: 'scroll-m-20 text-4xl font-bold tracking-tighter lg: text-5xl text-primary-11',
-      h2: 'scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0 text-primary-11',
-      h3: 'scroll-m-20 text-2xl font-semibold tracking-tight text-primary-11',
-      h4: 'scroll-m-20 text-xl font-semibold tracking-tight text-primary-11',
-      p: ' [&:not(:first-child)]:mt-6 text-primary-11',
-      // blockquote: "mt-6 border-l-2 pl-6 italic",
-      // list: "my-6 ml-6 list-disc [&>li]:mt-2",
+      h1: 'scroll-m-20 text-4xl font-bold tracking-tighter lg: text-5xl',
+      h2: 'scroll-m-20 text-3xl font-semibold tracking-tight first:mt-0',
+      h3: 'scroll-m-20 text-2xl font-semibold tracking-tight',
+      h4: 'scroll-m-20 text-xl font-semibold tracking-tight',
+      p: ' [&:not(:first-child)]:mt-6',
+      blockquote: 'mt-6 border-l-2 pl-6 italic',
+      li: 'my-6 ml-6 list-disc [&>li]:mt-2',
     },
     affects: {
       default: '',

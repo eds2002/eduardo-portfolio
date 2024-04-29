@@ -23,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-secondary-1">
+    <html lang="en" className="bg-white selection:bg-primary-1/25">
       <body className={inter.className}>
         {children}
         <Analytics />
