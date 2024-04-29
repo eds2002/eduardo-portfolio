@@ -1,4 +1,4 @@
-import React, { MutableRefObject, RefObject, useEffect, useRef } from 'react'
+import { MutableRefObject, useEffect } from 'react'
 import useViewportStore from '../store/viewportStore'
 import { useInView } from 'framer-motion'
 

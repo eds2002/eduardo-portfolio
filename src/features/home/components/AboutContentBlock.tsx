@@ -1,9 +1,5 @@
 'use client'
 import Typography from '@/components/Typography'
-import { useInView } from 'framer-motion'
-import { useEffect, useRef } from 'react'
-import useViewportStore from '../store/viewportStore'
-import { useInViewHook } from '../utils/useInViewHook'
 
 const sectionId = 'about'
 
@@ -39,8 +35,8 @@ export const AboutContentBlock = () => {
         >
           I work as a <Span>Full Stack Developer</Span> now, and I have a wide
           range of projects under my belt, including various mobile and web
-          apps. Currently I work at <Span>Transakt</Span>, it's a company that
-          aims to make personal money management easier for customers by
+          apps. Currently I work at <Span>Transakt</Span>, it&apos;s a company
+          that aims to make personal money management easier for customers by
           providing an easy-to-use budgeting tool that enables them to
           successfully manage their funds.
         </Typography>
@@ -49,9 +45,9 @@ export const AboutContentBlock = () => {
           affects={'removePMargin'}
           className="text-md opacity-75"
         >
-          In addition to my career goals, I'm dedicated to leading a healthy
-          lifestyle. I find comfort and renewal in going to the gym on a daily
-          basis, in always discovering new things on the internet, and in
+          In addition to my career goals, I&apos;m dedicated to leading a
+          healthy lifestyle. I find comfort and renewal in going to the gym on a
+          daily basis, in always discovering new things on the internet, and in
           savoring the time I spend with my family, friends, and my cat.
         </Typography>
       </div>

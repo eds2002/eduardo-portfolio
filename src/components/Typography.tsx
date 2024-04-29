@@ -32,18 +32,19 @@ export interface TypographyProps
   extends React.HTMLAttributes<HTMLHeadingElement>,
     VariantProps<typeof typographyVariants> {}
 
-const Typography = React.forwardRef<HTMLHeadingElement, TypographyProps>(
-  ({ className, variant, affects, ...props }, ref) => {
-    const Comp = variant || 'p'
-    return (
-      <Comp
-        className={cn(typographyVariants({ variant, affects, className }))}
-        ref={ref}
-        {...props}
-      />
-    )
-  }
-)
+const Typography = React.forwardRef<
+  HTMLHeadingElement | HTMLParagraphElement | HTMLQuoteElement,
+  TypographyProps
+>(({ className, variant, affects, ...props }, ref) => {
+  const Comp = variant || 'p'
+  return (
+    <Comp
+      className={cn(typographyVariants({ variant, affects, className }))}
+      ref={ref}
+      {...(props as any)}
+    />
+  )
+})
 Typography.displayName = 'H1'
 
 export default Typography
